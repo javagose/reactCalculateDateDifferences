@@ -26,9 +26,7 @@ class MyForm extends Component {
     }
     // handle Form submit
     handleSubmit(event) {
-    var a = moment(this.state.startDate);
-    var b = moment(this.state.endDate);
-    this.state.diff = a.diff(b, 'days');
+    this.state.diff = Math.abs(moment(this.state.startDate).diff(moment(this.state.endDate), 'days'));
     console.log("start", event.target.startDate , " end ", event.target.startDate, "diff", this.state.diff);
     alert('Day difference betwwen the two date is: ' + this.state.diff);
         event.preventDefault();
