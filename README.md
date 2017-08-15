@@ -1,5 +1,5 @@
 
-This project aims to calculate difference between two given date. using [Moment](https://github.com/moment/moment) and [Hacker0x01/react-datepicker]([https://github.com/Hacker0x01/react-datepicker).
+This project aims to calculate difference between two given date. using [Moment](https://github.com/moment/moment) and [Hacker0x01/react-datepicker](https://github.com/Hacker0x01/react-datepicker).
 
 ## Folder Structure
 
