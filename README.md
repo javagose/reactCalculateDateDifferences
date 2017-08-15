@@ -30,9 +30,9 @@ For the project to build, **these files must exist with exact filenames**:
 * `src/index.js` is the JavaScript entry point.
 
 
-## Available Scripts
+## Run the project 
 
-To Run the the project use :
+Use :
 
 ### `npm install`
 
