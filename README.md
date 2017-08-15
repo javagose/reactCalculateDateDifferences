@@ -32,11 +32,11 @@ For the project to build, **these files must exist with exact filenames**:
 
 ## Available Scripts
 
-In the project directory, you can run:
+To Run the the project use :
 
 ### `npm install`
 
-install Dependencies.
+To install Dependencies.
 
 ### `npm start`
 
