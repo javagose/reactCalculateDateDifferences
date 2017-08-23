@@ -26,7 +26,7 @@ it('it should return a positive 6', ()=> {
   expect(Myservice.calculateDiff(moment().subtract(8, 'days'),moment().subtract(2, 'days'))).to.eql(6);
 })
 
-it('it should containe date picker', ()=> {
+/*it('it should containe date picker', ()=> {
   const wrapper = shallow(<MyForm />);
   expect(wrapper.contains(<label>Start Date  : </label>)).to.equal(true);
-})
+})*/
