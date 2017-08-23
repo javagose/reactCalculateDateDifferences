@@ -1,5 +1,5 @@
 
-This project aims to calculate difference between two given date. using [https://github.com/moment/moment](moment) and [https://github.com/Hacker0x01/react-datepicker](react-datepicker).
+This project aims to calculate difference between two given date. using [Moment](https://github.com/moment/moment) and [Hacker0x01/react-datepicker](https://github.com/Hacker0x01/react-datepicker).
 
 ## Folder Structure
 
@@ -30,13 +30,13 @@ For the project to build, **these files must exist with exact filenames**:
 * `src/index.js` is the JavaScript entry point.
 
 
-## Available Scripts
+## Run the project 
 
-In the project directory, you can run:
+Use :
 
 ### `npm install`
 
-install Dependencies.
+To install Dependencies.
 
 ### `npm start`
 
