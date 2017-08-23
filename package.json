@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "moment": "^2.18.1",
-    "react": "^15.6.1",
+    "react": "^15.0.0-rc.2",
     "react-datepicker": "^0.53.0",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.0.0-rc.2",
     "react-scripts": "1.0.11"
   },
   "scripts": {
@@ -14,5 +14,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^2.9.1",
+    "react-addons-test-utils": "^15.0.0-rc.2"
   }
 }
