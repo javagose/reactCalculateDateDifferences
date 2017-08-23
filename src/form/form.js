@@ -3,20 +3,20 @@ import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
 import 'react-datepicker/dist/react-datepicker.css';
+import MyService from './service.js'
 
 class MyForm extends Component {
    constructor(props) {
       super(props);
-      this.state = {startDay: moment(), endDay : moment(), diff : null};
-      console.log(this.state);
-
-      this.handleStartChange = this.handleStartChange.bind(this);
+      this.state = {startDay: moment(), endDay : moment(), diff : null, selectedDate :0};
+      this.handleChange = this.handleChange.bind(this);
       this.handleEndChange = this.handleEndChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // handle firstDate Input Change
-    handleStartChange(date) {
+    handleChange(date) {
+        console.log( "date : ", date, "this :", this.state.selectedDate);
         this.setState({startDate: date});
     }
     // handle SecondDate Input Change
@@ -26,10 +26,8 @@ class MyForm extends Component {
     }
     // handle Form submit
     handleSubmit(event) {
-    this.state.diff = Math.abs(moment(this.state.startDate).diff(moment(this.state.endDate), 'days'));
-    console.log("start", event.target.startDate , " end ", event.target.startDate, "diff", this.state.diff);
-    alert('Day difference betwwen the two date is: ' + this.state.diff);
-        event.preventDefault();
+        MyService.calculateDiff(moment(this.state.startDate).toDate, moment(this.state.endDate).toDate)
+    this.setState({diff : Math.abs(moment(this.state.startDate).diff(moment(this.state.endDate), 'days'))});
     }
 
       
@@ -44,7 +42,12 @@ class MyForm extends Component {
                 <label>Start Date  : </label>
                 <DatePicker
                     selected={this.state.startDate}
-                    onChange={this.handleStartChange}
+                    onChange={this.handleChange}
+                    selectsStart
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    isClearable={true}
+                    todayButton={"Today"}
                     className="form-control"
                 />
               </div>
@@ -54,12 +57,18 @@ class MyForm extends Component {
                     <DatePicker
                         selected={this.state.endDate}
                         onChange={this.handleEndChange}
+                        selectsEnd
+                        startDate={this.state.startDate}
+                        endDate={this.state.endDate}
+                        isClearable={true}
+                        todayButton={"Today"}
                         className="form-control"
                     /> 
               </div>
 
             <input type="submit" value="soumettre" className="btn btn-primary" />
           </form>
+          <h1 className="bg-info"> la difference est : {this.state.diff}</h1>
         </div>
     );
   }

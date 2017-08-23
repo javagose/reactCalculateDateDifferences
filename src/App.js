@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Nimbleways</h2>
+          <h2>Welcome to <a href="https://nimbleways.com/home/"> Nimbleways</a></h2>
         </div>
         <p className="App-intro">
           Startup spécialisée dans la réalisation digitale.
